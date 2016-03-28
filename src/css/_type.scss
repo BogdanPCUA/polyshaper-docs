@@ -1,0 +1,157 @@
+// Typography
+//
+// Headings, body text, lists, and other misc typographic elements.
+
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: proxima-nova, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 400;
+  color: #868686;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em;
+  margin-bottom: .5rem;
+  font-family: proxima-nova, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+
+  color: #4E4E4E;
+  > * {
+    vertical-align: baseline;
+  }
+}
+
+h1 .header-anchor {
+  display: none;
+}
+
+h2, h3, h4, h5, h6 {
+  &[id] {
+    position: relative;
+
+    .header-anchor {
+      position: absolute;
+      left: -1em;
+      width: 1em;
+      height: 100%;
+      line-height: 1.3em;
+      vertical-align: middle;
+      padding-right: 0.25em;
+
+      text-align: right;
+      font-size: 0.9em;
+      color: #e5e5e5;
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+      text-decoration: none;
+      font-weight: normal;
+    }
+
+    &:hover .header-anchor {
+      opacity: 1;
+    }
+  }
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  // margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  // margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+
+h4, h5, h6 {
+  // margin-top: 1rem;
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+// strong {
+//   color: #303030;
+// }
+
+ul, ol, dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ul, ol {
+  li {
+    padding-left: 20px;
+    position: relative;
+    &:before {
+      -webkit-font-smoothing: none;
+      content: '⁃';
+      // font-size: 0.6em;
+      color: rgba(#4E4E4E, 0.8);
+      position: absolute;
+      left: 0;
+      top: -0.05em;
+      // width: 6px;
+      // height: 1px;
+      // background-color: rgba(#4E4E4E, 0.5);
+    }
+  }
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: .5rem;
+}
+
+hr {
+  position: relative;
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #fff;
+}
+
+abbr {
+  font-size: 85%;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+
+  &[title] {
+    cursor: help;
+    border-bottom: 1px dotted #e5e5e5;
+  }
+}
+
+blockquote {
+  padding: .5rem 1rem;
+  margin: .8rem 0;
+  color: #7a7a7a;
+  border-left: .25rem solid #e5e5e5;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 30em) {
+    padding-right: 5rem;
+    padding-left: 1.25rem;
+  }
+}
