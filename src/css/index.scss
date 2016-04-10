@@ -128,7 +128,12 @@ a, a:hover {
 }
 
 
-
+.Posts {
+    list-style: none;
+    h2 a {
+        text-decoration: none;
+    }
+}
 
 
 .EmbedVideo {

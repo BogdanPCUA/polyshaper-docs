@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { pages, posts, site } from '../../data';
 import Header from './header.jsx';
 import Footer from './footer.jsx';
+import Scripts from './scripts.jsx';
 
 const TYPEKIT_CODE = `(function(d) {
   var config = {
@@ -32,6 +33,7 @@ export default ({ children, path }) =>
         {children}
         <Footer />
       </div>
+      <Scripts />
     </body>
   </html>
 
